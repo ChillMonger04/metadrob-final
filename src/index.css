@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.numText {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  color: #16f6fe;
+  -webkit-text-stroke-width: 1px;
+}
