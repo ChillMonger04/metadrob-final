@@ -1,6 +1,7 @@
 import Introduction from "./components/Introduction";
 import Solutions from "./components/Solutions";
 import Features from "./components/Features";
+import Integration from "./components/Integration";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <Introduction />
       <Solutions />
       <Features />
+      <Integration />
     </div>
   );
 };

@@ -31,13 +31,13 @@ body {
 .scrollbar {
   cursor: grab;
   width: 10vw;
-  background-color: #008EED;
+  background-color: #008eed;
   transition: all ease 0.5s;
 }
 
 .scrollbar:active {
   cursor: grabbing;
-  background-color:#025085 ;
+  background-color: #025085;
 }
 
 .carousel {
@@ -49,4 +49,29 @@ body {
   display: none;
 }
 
+/* SeamlessIntegration.css */
+@keyframes scroll-full {
+  0% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(100%);
+  }
+  40% {
+    transform: translateY(200%);
+  }
+  60% {
+    transform: translateY(300%);
+  }
+  80% {
+    transform: translateY(400%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-scroll-full {
+  animation: scroll-full 6s linear infinite;
+}
 
