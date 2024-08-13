@@ -22,4 +22,31 @@ body {
   -webkit-text-stroke-width: 1px;
 }
 
+.scrollbar-container {
+  margin-top: 3vw;
+  cursor: pointer;
+  height: 0.5vw;
+}
+
+.scrollbar {
+  cursor: grab;
+  width: 10vw;
+  background-color: #008EED;
+  transition: all ease 0.5s;
+}
+
+.scrollbar:active {
+  cursor: grabbing;
+  background-color:#025085 ;
+}
+
+.carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
 
