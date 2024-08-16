@@ -3,6 +3,7 @@ import Solutions from "./components/Solutions";
 import Features from "./components/Features";
 import Integration from "./components/Integration";
 import Productivity from "./components/Productivity";
+import Industries from "./components/Industries";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Features />
       <Integration />
       <Productivity />
+      <Industries />
     </div>
   );
 };
