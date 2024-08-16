@@ -1,6 +1,6 @@
 const Productivity = () => {
   return (
-    <div className="w-full min-h-screen bg-black text-white px-44 mt-36">
+    <div className="w-full min-h-screen bg-black text-white px-40 mt-36">
       <div className="productivityTop flex flex-col items-center justify-center text-center">
         <h1 className="text-[40px] w-[70%] font-semibold leading-none">
           Increase productivity with advanced product management
@@ -14,7 +14,7 @@ const Productivity = () => {
       </div>
 
       <div className="productivityWrapper mt-6 flex flex-col gap-4 text-black">
-        <div className="productivityCardTop w-full h-[55vh] bg-pink-200 relative">
+        <div className="productivityCardTop w-full h-[57vh] bg-pink-200 relative">
           <div className="productivityCardTopText w-[22vw] h-[8vw] p-5">
             <h2 className="font-bold leading-tight text-[1.6vw]">
               Drag-n-drop Builder
@@ -33,39 +33,52 @@ const Productivity = () => {
           />
         </div>
 
-        <div className="productivityCardBottomWrapper w-full h-[48vh] relative flex items-center justify-between">
-          <div className="productivityCardBottom h-full w-[32%] bg-gray-400">
+        <div className="productivityCardBottomWrapper w-full h-[57vh] relative flex items-center justify-between">
+          <div className="productivityCardBottom h-full w-[32%] bg-[#FFFFFF14] text-white relative overflow-hidden">
             <div className="w-[19vw] h-[8vw] p-5">
               <h2 className="font-bold leading-tight text-[1.6vw]">Scalable</h2>
-              <p className="text-gray-900 text-[0.9vw] leading-[1vw] mt-1">
+              <p className="text-[#FFFFFFA6] text-[0.9vw] leading-[1vw] mt-1">
                 Brand the entire experience including registration pages,
                 emails, backdrops, logo placements, fonts, overlays, and photo
                 booth templates.
               </p>
             </div>
+            <img
+              src="bottom-1.png"
+              className="absolute -bottom-[14%] -right-1"
+            />
           </div>
-          <div className="productivityCardBottom h-full w-[32%] bg-gray-400">
+
+          <div className="productivityCardBottom h-full w-[32%] bg-[#FFFFFF14] text-white relative overflow-hidden">
             <div className="w-[19vw] h-[8vw] p-5">
               <h2 className="font-bold leading-tight text-[1.6vw]">
                 Lightning Fast
               </h2>
-              <p className="text-gray-900 text-[0.9vw] leading-[1vw] mt-1">
+              <p className="text-[#FFFFFFA6] text-[0.9vw] leading-[1vw] mt-1">
                 Add & Manage your products lighting fast with metadrob’s import
                 CSV feature or connect with existing e commerce to directly
                 import fr
               </p>
             </div>
+            <img
+              src="bottom-2.png"
+              className="absolute -bottom-[14%] -right-1"
+            />
           </div>
-          <div className="productivityCardBottom h-full w-[32%] bg-gray-400">
+          <div className="productivityCardBottom h-full w-[32%] bg-[#FFFFFF14] text-white relative overflow-hidden">
             <div className="w-[19vw] h-[8vw] p-5">
               <h2 className="font-bold leading-tight text-[1.6vw]">
                 Predictive analytics
               </h2>
-              <p className="text-gray-900 text-[0.9vw] leading-[1vw] mt-1">
+              <p className="text-[#FFFFFFA6] text-[0.9vw] leading-[1vw] mt-1">
                 Invite speakers to a private waiting room to meet and prep to go
                 on stage.
               </p>
             </div>
+            <img
+              src="bottom-3.png"
+              className="absolute -bottom-[14%] -right-1"
+            />
           </div>
         </div>
       </div>
