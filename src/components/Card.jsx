@@ -13,8 +13,8 @@ const Card = ({ index, imgSrc, title }) => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="mb-2">
-              <h2 className="text-2xl font-bold">{title}</h2>
+            <div className="mb-2 mt-1">
+              <h2 className="text-[1.78vw] font-bold leading-none">{title}</h2>
               <p className="mt-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
