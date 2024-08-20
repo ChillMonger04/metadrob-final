@@ -4,6 +4,7 @@ import Features from "./components/Features";
 import Integration from "./components/Integration";
 import Productivity from "./components/Productivity";
 import Industries from "./components/Industries";
+import Testimonials from "./components/Testimonials";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Integration />
       <Productivity />
       <Industries />
+      <Testimonials />
     </div>
   );
 };
