@@ -27,7 +27,7 @@ const Productivity = () => {
 
           
           <img
-            src="public/assets/productivity-top.png"
+            src="/productivity-top.png"
             className="absolute -bottom-[2.6%] -right-[5%] w-[46vw] h-[49.4vh] object-cover"
             alt="Productivity Top"
           />
@@ -44,7 +44,7 @@ const Productivity = () => {
               </p>
             </div>
             <img
-              src="public/assets/bottom-1.png"
+              src="/bottom-1.png"
               className="absolute -bottom-[14%] -right-1"
             />
           </div>
@@ -61,7 +61,7 @@ const Productivity = () => {
               </p>
             </div>
             <img
-              src="public/assets/bottom-2.png"
+              src="/bottom-2.png"
               className="absolute -bottom-[14%] -right-1"
             />
           </div>
@@ -76,7 +76,7 @@ const Productivity = () => {
               </p>
             </div>
             <img
-              src="public/assets/bottom-3.png"
+              src="/bottom-3.png"
               className="absolute -bottom-[14%] -right-1"
             />
           </div>

@@ -5,42 +5,42 @@ const cardData = [
   {
     title: "Virtual Showroom",
     description: "Our smooth integration streamlines your business, connecting",
-    image: "public/assets/store.png",
+    image: "/store.png",
   },
   {
     title: "Pop Up Store",
     description: "Our smooth integration streamlines your business, connecting",
-    image: "public/assets/house.png",
+    image: "/house.png",
   },
   {
     title: "Digital Twin",
     description: "Our smooth integration streamlines your business, connecting",
-    image: "public/assets/computer.png",
+    image: "/computer.png",
   },
   {
     title: "Shop with friends",
     description: "Our smooth integration streamlines your business, connecting",
-    image: "public/assets/friends.png",
+    image: "/friends.png",
   },
   {
     title: "Virtual Showroom",
     description: "Our smooth integration streamlines your business, connecting",
-    image: "public/assets/store.png",
+    image: "/store.png",
   },
   {
     title: "Pop Up Store",
     description: "Our smooth integration streamlines your business, connecting",
-    image: "public/assets/house.png",
+    image: "/house.png",
   },
   {
     title: "Digital Twin",
     description: "Our smooth integration streamlines your business, connecting",
-    image: "public/assets/computer.png",
+    image: "/computer.png",
   },
   {
     title: "Shop with friends",
     description: "Our smooth integration streamlines your business, connecting",
-    image: "public/assets/friends.png",
+    image: "/friends.png",
   },
 ];
 

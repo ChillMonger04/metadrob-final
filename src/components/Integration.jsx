@@ -40,7 +40,7 @@ const SeamlessIntegration = () => {
         </div>
 
         <img
-          src="public/assets/integration.png"
+          src="/integration.png"
           alt="Virtual Store Integration"
           className="w-full h-auto rounded-lg mt-16"
         />
