@@ -6,7 +6,7 @@ const Introduction = () => {
           The most innovative companies supported Metadrob
         </h3>
         <img
-          src="introBanner.png"
+          src="public\assets\introBanner.png"
           alt="companies-banner"
           className="w-[70vw] leading-snug -mt-[10vw]"
         />
