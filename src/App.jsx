@@ -22,6 +22,9 @@ const App = () => {
       const scroll = new LocomotiveScroll({
         el: scrollRef.current,
         smooth: true,
+        inertia: 0.8, // Adjust for performance
+        multiplier: 0.8, // Adjust for performance
+        smoothMobile: true, // Ensure smooth scrolling on mobile
       });
 
       return () => {
@@ -48,10 +51,14 @@ const App = () => {
     }
 
     // Update mouse position
-    window.addEventListener("mousemove", (event) => {
-      mouse.x = event.pageX;
-      mouse.y = event.pageY;
-    });
+    window.addEventListener(
+      "mousemove",
+      (event) => {
+        mouse.x = event.pageX;
+        mouse.y = event.pageY;
+      },
+      { passive: true }
+    ); // Use passive listener
 
     function updateTrail() {
       let x = mouse.x;
@@ -74,12 +81,16 @@ const App = () => {
     animate();
 
     // Center blob cursor on mouse
-    window.addEventListener("mousemove", (event) => {
-      const blobWidth = blob.offsetWidth;
-      const blobHeight = blob.offsetHeight;
-      blob.style.left = `${event.pageX - blobWidth / 2}px`;
-      blob.style.top = `${event.pageY - blobHeight / 2}px`;
-    });
+    window.addEventListener(
+      "mousemove",
+      (event) => {
+        const blobWidth = blob.offsetWidth;
+        const blobHeight = blob.offsetHeight;
+        blob.style.left = `${event.pageX - blobWidth / 2}px`;
+        blob.style.top = `${event.pageY - blobHeight / 2}px`;
+      },
+      { passive: true }
+    ); // Use passive listener
 
     return () => {
       document.body.removeChild(blob);

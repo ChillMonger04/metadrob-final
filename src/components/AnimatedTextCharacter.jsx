@@ -31,18 +31,18 @@ const AnimatedTextCharacter = ({
       y: 0,
       transition: {
         type: "spring",
-        damping: 12,
-        stiffness: 100,
+        damping: 20, // Increased damping for smoother transitions
+        stiffness: 80, // Lower stiffness to reduce load
       },
     },
     hidden: {
       opacity: 0,
-      x: -20,
-      y: 10,
+      x: -10, // Smaller movement range
+      y: 5,
       transition: {
         type: "spring",
-        damping: 12,
-        stiffness: 100,
+        damping: 20,
+        stiffness: 80,
       },
     },
   };
@@ -68,6 +68,7 @@ const AnimatedTextCharacter = ({
               variants={child}
               style={{
                 display: "inline-block", // Ensure each letter is inline-block for animation
+                willChange: "transform, opacity", // Hint for browser optimization
               }}
             >
               {letter === " " ? "\u00A0" : letter}
