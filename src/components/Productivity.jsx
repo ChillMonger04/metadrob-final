@@ -1,15 +1,27 @@
+import AnimatedTextCharacter from "./AnimatedTextCharacter";
+
 const Productivity = () => {
   return (
-    <div className="w-full min-h-screen bg-black text-white px-40 mt-36">
+    <div
+      className="w-full min-h-screen bg-black text-white px-40 mt-36"
+      data-scroll-section
+    >
       <div className="productivityTop flex flex-col items-center justify-center text-center">
-        <h1 className="text-[40px] w-[70%] font-semibold leading-none">
-          Increase productivity with advanced product management
+        <h1 className="text-[40px] w-[70%] font-semibold">
+          <AnimatedTextCharacter
+            text="Increase productivity with advanced product management"
+            fontSize="40px"
+            textAlign="center"
+            stagger="0.02"
+          />
         </h1>
         <p className="text-[#b3b2b2] w-[90%] text-[1.1vw] mt-[2vw]">
-          Our industry-specific solutions are tailor-made to address your unique
-          challenges and opportunities, providing specialized support to fuel
-          your success in your field. Unlock the full potential of your business
-          with precision and expertise.
+          <AnimatedTextCharacter
+            text={`Our industry-specific solutions are tailor-made to address your unique challenges and opportunities, providing\nspecialized support to fuel your success in your field. Unlock the full potential of your business with precision and expertise.`}
+            fontSize="1.21vw"
+            textAlign="center"
+            stagger="0.008"
+          />
         </p>
       </div>
 
@@ -25,7 +37,6 @@ const Productivity = () => {
             </p>
           </div>
 
-          
           <img
             src="/productivity-top.png"
             className="absolute -bottom-[2.6%] -right-[5%] w-[46vw] h-[49.4vh] object-cover"

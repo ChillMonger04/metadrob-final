@@ -12,6 +12,51 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: none;
+}
+
+#blob {
+  position: absolute;
+  width:110px; /* Adjust size if needed */
+  height:110px; /* Adjust size if needed */
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 128, 255, 1) 0%,           /* Center color */
+    rgba(0, 0, 51, 0.9) 60%,           /* Transition to dark blue */
+    rgba(0, 0, 51, 1) 100%             /* Outer dark blue */
+  );
+  filter: blur(45px);                   /* Increase blur effect for softness */
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Trail cursor */
+.trail {
+  position: absolute;
+  width: 100px; /* Adjust size if needed */
+  height: 100px; /* Adjust size if needed */
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 128, 255, 0.5) 0%,           /* Lighter center */
+    rgba(0, 0, 51, 0.6) 60%,             /* Transition to darker blue */
+    rgba(0, 0, 51, 0.9) 100%             /* Outer darker blue */
+  );
+  filter: blur(25px);                   /* Increase blur effect for softness */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .numText {
@@ -43,10 +88,38 @@ body {
 .carousel {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  padding: 2vw;
 }
 
 .carousel::-webkit-scrollbar {
   display: none;
+}
+
+.heading2 {
+  color: transparent;
+  background: rgb(37, 37, 37) 50%;
+  background-position-x: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 600;
+}
+
+.heading3 {
+  color: transparent;
+  background: rgb(37, 37, 37) 50%;
+  background-position-x: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 600;
+}
+
+.heading4 {
+  color: transparent;
+  background: rgb(37, 37, 37) 50%;
+  background-position-x: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 600;
 }
 
 /* SeamlessIntegration.css */

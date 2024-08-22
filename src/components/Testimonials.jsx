@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Testimonials = () => {
   return (
-    <div className='w-full h-screen'>Testimonials</div>
-  )
-}
+    <div className="w-full h-screen text-white" data-scroll-section>
+      Testimonials
+    </div>
+  );
+};
 
-export default Testimonials
+export default Testimonials;

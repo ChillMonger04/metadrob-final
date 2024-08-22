@@ -1,4 +1,5 @@
 import Card from "./Card";
+import AnimatedTextCharacter from "./AnimatedTextCharacter";
 
 const cardData = [
   {
@@ -45,15 +46,26 @@ const cardData = [
 
 const Industries = () => {
   return (
-    <div className="w-full min-h-screen bg-black text-white px-16 mt-36">
+    <div
+      className="w-full min-h-screen bg-black text-white px-16 mt-36"
+      data-scroll-section
+    >
       <div className="industriesTop flex flex-col items-center justify-center text-center mb-16">
         <h1 className="text-[40px] w-[70%] font-semibold leading-none">
-          Industries We Serve
+          <AnimatedTextCharacter
+            text="Industries We Serve"
+            fontSize="40px"
+            textAlign="center"
+            stagger="0.02"
+          />
         </h1>
         <p className="text-[#b3b2b2] w-[70%] text-[1.1vw] mt-[2vw]">
-          Explore Metadrob's industry-specific solutions, crafted to meet your
-          unique needs and drive your success. Unlock your full potential with
-          our tailored support and expertise.
+          <AnimatedTextCharacter
+            text={`Explore Metadrob's industry-specific solutions, crafted to meet your unique needs and drive your success. Unlock\nyour full potential with our tailored support and expertise.`}
+            fontSize="1.21vw"
+            textAlign="center"
+            stagger="0.008"
+          />
         </p>
       </div>
 

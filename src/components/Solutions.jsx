@@ -1,5 +1,9 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import SplitType from "split-type";
+import AnimatedTextCharacter from "./AnimatedTextCharacter";
 
 const cardData = [
   {
@@ -81,18 +85,52 @@ const Solutions = () => {
     }
   };
 
+  // // For text reveal animation
+  // useEffect(() => {
+  //   gsap.config({ trialWarn: false });
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  //   const split = new SplitType(".heading2", { type: "chars" });
+
+  //   gsap.to(split.chars, {
+  //     delay: 2,
+  //     color: "white",
+  //     stagger: 1,
+  //     duration: 5,
+  //     ease: "power3.out",
+  //     scrollTrigger: {
+  //       trigger: ".parent",
+  //       start: "top 70%",
+  //       end: "top 25%",
+  //       scrub: true,
+  //       markers: false,
+  //     },
+  //   });
+  //   ScrollTrigger.refresh();
+  // }, []);
+
   return (
-    <div className="w-full min-h-screen px-16 mt-36 mb-24 text-white">
-      <div className="sol-top flex items-start justify-between mb-20">
-        <h2 className="text-[43px] w-[40%] font-semibold leading-[4vw]">
-          Unlock Next-Level Shopping: Innovative Virtual Retail Solutions for
-          Your Business
+    <div
+      className="parent w-full min-h-screen px-16 mt-36 mb-24 text-white"
+      data-scroll-section
+    >
+      <div className="sol-top child flex items-start justify-between mb-20">
+        <h2 className="text-[40px] w-[45%] font-semibold leading-[4vw]">
+          <AnimatedTextCharacter
+            text={`Unlock Next-Level\nShopping:Innovative\nVirtual Retail Solutions\nfor Your Business`}
+            fontSize="40px"
+            textAlign="left"
+            stagger="0.02"
+          />
+          {/* Unlock Next-Level Shopping: Innovative Virtual Retail Solutions for Your Business */}
         </h2>
         <p className="text-[#b3b2b2] w-[42%] text-[1.21vw]">
-          Virtual Retail Solutions redefine shopping convenience, bringing the
-          store to your fingertips. Experience seamless online shopping like
-          never before. Get a tailor-made solution for your retail business
-          needs.
+          <AnimatedTextCharacter
+            text={`Virtual Retail Solutions redefine shopping convenience, bringing the\nstore to your fingertips. Experience seamless online shopping like\nnever before. Get a tailor-made solution for your retail business\nneeds.`}
+            fontSize="1.21vw"
+            textAlign="left"
+            stagger="0.008"
+          />
         </p>
       </div>
 
@@ -108,7 +146,7 @@ const Solutions = () => {
           {cardData.map((card, index) => (
             <motion.div
               key={index}
-              className="card bg-black w-[20vw] border-2 border-gray-500 h-[30vw] flex-shrink-0 rounded-[2vw] p-5 flex flex-col items-center justify-center"
+              className="card bg-black w-[20vw] h-[30vw] flex-shrink-0 rounded-[2vw] p-5 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:border-2 border-gray-700"
             >
               <img className="w-52" src={card.image} alt={card.title} />
               <h3 className="mt-6 font-semibold uppercase text-[1.5vw]">
