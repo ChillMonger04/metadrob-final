@@ -61,7 +61,7 @@ const Industries = () => {
         </h1>
         <p className="text-[#b3b2b2] w-[70%] text-[1.1vw] mt-[2vw]">
           <AnimatedTextCharacter
-            text={`Explore Metadrob's industry-specific solutions, crafted to meet your unique needs and drive your success. Unlock\nyour full potential with our tailored support and expertise.`}
+            text={`Explore Metadrob's industry-specific solutions, crafted to meet your unique needs and drive your success. Unlock your full\npotential with our tailored support and expertise.`}
             fontSize="1.21vw"
             textAlign="center"
             stagger="0.008"
