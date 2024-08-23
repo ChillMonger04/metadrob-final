@@ -162,7 +162,7 @@ body {
   position: absolute;
   bottom: -14%;
   right: -1%;
-  width: 100%;
+  width: 98%; /* Larger width */
   height: auto;
   transition: transform 0.3s ease, bottom 0.3s ease, filter 0.3s ease;
   z-index: 1;
