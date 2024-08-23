@@ -11,6 +11,7 @@ import Integration from "./components/Integration";
 import Productivity from "./components/Productivity";
 import Industries from "./components/Industries";
 import Testimonials from "./components/Testimonials";
+import Form from "./components/Form";
 
 const App = () => {
   const scrollRef = useRef(null);
@@ -112,6 +113,7 @@ const App = () => {
         <Productivity />
         <Industries />
         <Testimonials />
+        <Form />
       </div>
     </div>
   );
