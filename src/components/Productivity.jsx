@@ -27,7 +27,7 @@ const Productivity = () => {
 
       <div className="productivityWrapper mt-6 flex flex-col gap-4 text-black">
         {/* Top card */}
-        <div className="productivityCardTop w-full h-[57vh] bg-gradient-to-r from-slate-300 via-pink-200 to-pink-300 relative">
+        <div className="productivityCardTop w-full h-[57vh] bg-pink-200 relative">
           <div className="productivityCardTopText w-[22vw] h-[8vw] p-5">
             <h2 className="font-bold leading-tight text-[1.6vw]">
               Drag-n-drop Builder
