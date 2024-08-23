@@ -1,4 +1,5 @@
 import MarqueeItem from "./MarqueeItem"; // Import the MarqueeItem component
+import AnimatedTextCharacter from "./AnimatedTextCharacter";
 
 const testimonials = [
   {
@@ -52,7 +53,12 @@ const Testimonials = () => {
   return (
     <div className="w-full h-screen text-white mt-40">
       <h1 className="flex flex-col items-center justify-center text-[40px] font-semibold mb-16">
-        What are Clients are saying
+        <AnimatedTextCharacter
+          text="What are Clients are saying"
+          fontSize="40px"
+          textAlign="center"
+          stagger="0.02"
+        />
       </h1>
       <MarqueeItem testimonials={testimonials} from="0%" to="-100%" />
     </div>
