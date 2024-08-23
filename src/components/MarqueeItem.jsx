@@ -6,7 +6,7 @@ import { FaLinkedin, FaFacebook } from "react-icons/fa";
 const TestimonialCard = ({ testimonial, onMouseEnter, onMouseLeave }) => {
   return (
     <div
-      className="w-96 h-[21.5vw] bg-[#131313] rounded-sm p-6 mr-2 flex flex-col justify-center"
+      className="w-96 h-[23vw] bg-[#131313] rounded-sm p-6 mr-2 flex flex-col justify-center"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
@@ -55,7 +55,7 @@ const MarqueeItem = ({ testimonials, from, to }) => {
       <motion.div
         initial={{ x: from }}
         animate={{ x: isPaused ? from : to }}
-        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         className="flex flex-shrink-0"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -73,7 +73,7 @@ const MarqueeItem = ({ testimonials, from, to }) => {
       <motion.div
         initial={{ x: from }}
         animate={{ x: isPaused ? from : to }}
-        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         className="flex flex-shrink-0"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
-import LocomotiveScroll from "locomotive-scroll";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./locomotive-scroll.css"; // Ensure this path is correct
+// import { useEffect, useRef } from "react";
+// import LocomotiveScroll from "locomotive-scroll";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import "./locomotive-scroll.css"; // Ensure this path is correct
 
 import Introduction from "./components/Introduction";
 import Solutions from "./components/Solutions";
@@ -11,28 +11,28 @@ import Integration from "./components/Integration";
 import Productivity from "./components/Productivity";
 import Industries from "./components/Industries";
 import Testimonials from "./components/Testimonials";
-import Form from "./components/Form";
+import ContactForm from "./components/ContactForm";
 
 const App = () => {
-  const scrollRef = useRef(null);
+  // const scrollRef = useRef(null);
 
-  useEffect(() => {
-    // Initialize Locomotive Scroll
-    gsap.registerPlugin(ScrollTrigger);
-    if (scrollRef.current) {
-      const scroll = new LocomotiveScroll({
-        el: scrollRef.current,
-        smooth: true,
-        inertia: 0.8, // Adjust for performance
-        multiplier: 0.8, // Adjust for performance
-        smoothMobile: true, // Ensure smooth scrolling on mobile
-      });
+  // useEffect(() => {
+  //   // Initialize Locomotive Scroll
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   if (scrollRef.current) {
+  //     const scroll = new LocomotiveScroll({
+  //       el: scrollRef.current,
+  //       smooth: true,
+  //       inertia: 0.8, // Adjust for performance
+  //       multiplier: 0.8, // Adjust for performance
+  //       smoothMobile: true, // Ensure smooth scrolling on mobile
+  //     });
 
-      return () => {
-        scroll.destroy();
-      };
-    }
-  }, []);
+  //     return () => {
+  //       scroll.destroy();
+  //     };
+  //   }
+  // }, []);
 
   // useEffect(() => {
   //   // Create and style the blob cursor
@@ -102,10 +102,10 @@ const App = () => {
   return (
     <div
       className="projectWrapper scroll-container"
-      data-scroll-container
-      ref={scrollRef}
+      // data-scroll-container
+      // ref={scrollRef}
     >
-      <div className="bg-black z-1">
+      <div className="bg-black z-20">
         <Introduction />
         <Solutions />
         <Features />
@@ -113,7 +113,7 @@ const App = () => {
         <Productivity />
         <Industries />
         <Testimonials />
-        <Form />
+        <ContactForm />
       </div>
     </div>
   );

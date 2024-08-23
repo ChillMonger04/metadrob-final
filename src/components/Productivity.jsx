@@ -4,7 +4,7 @@ const Productivity = () => {
   return (
     <div
       className="w-full min-h-screen bg-black text-white px-40 mt-36"
-      data-scroll-section
+      // data-scroll-section
     >
       <div className="productivityTop flex flex-col items-center justify-center text-center">
         <h1 className="text-[40px] w-[70%] font-semibold">

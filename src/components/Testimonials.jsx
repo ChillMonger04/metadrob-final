@@ -28,12 +28,29 @@ const testimonials = [
     linkedIn: "https://linkedin.com/company/arjiv",
     facebook: "https://facebook.com/arjiv",
   },
-  // Add more testimonials as needed
+  {
+    id: 4,
+    company: "Mangal Electrical",
+    logo: "/path/to/",
+    quote:
+      "Let your customers explore your retail store like they are walking through it with real experience of the products and location.",
+    linkedIn: "https://linkedin.com/company/arjiv",
+    facebook: "https://facebook.com/arjiv",
+  },
+  {
+    id: 5,
+    company: "Dynamic Cables",
+    logo: "/path/to/",
+    quote:
+      "Let your customers explore your retail store like they are walking through it with real experience of the products and location.",
+    linkedIn: "https://linkedin.com/company/arjiv",
+    facebook: "https://facebook.com/arjiv",
+  },
 ];
 
 const Testimonials = () => {
   return (
-    <div className="w-full h-screen text-white mt-40" data-scroll-section>
+    <div className="w-full h-screen text-white mt-40">
       <h1 className="flex flex-col items-center justify-center text-[40px] font-semibold mb-16">
         What are Clients are saying
       </h1>

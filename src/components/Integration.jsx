@@ -4,7 +4,7 @@ const SeamlessIntegration = () => {
   return (
     <div
       className="parentIntegration relative flex items-center justify-center min-h-screen bg-black mt-20"
-      data-scroll-section
+      // data-scroll-section
     >
       <div className="absolute inset-0 flex justify-around">
         <div className="relative w-[1.3px] h-[124vh] overflow-hidden">
