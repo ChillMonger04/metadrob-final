@@ -26,7 +26,8 @@ const Productivity = () => {
       </div>
 
       <div className="productivityWrapper mt-6 flex flex-col gap-4 text-black">
-        <div className="productivityCardTop w-full h-[57vh] bg-pink-200 relative">
+        {/* Top card */}
+        <div className="productivityCardTop w-full h-[57vh] bg-gradient-to-r from-slate-300 via-pink-200 to-pink-300 relative">
           <div className="productivityCardTopText w-[22vw] h-[8vw] p-5">
             <h2 className="font-bold leading-tight text-[1.6vw]">
               Drag-n-drop Builder
@@ -36,7 +37,6 @@ const Productivity = () => {
               generate an agenda that auto-updates as you move actions around.
             </p>
           </div>
-
           <img
             src="/productivity-top.png"
             className="absolute -bottom-[2.6%] -right-[5%] w-[46vw] h-[49.4vh] object-cover"
@@ -44,7 +44,9 @@ const Productivity = () => {
           />
         </div>
 
+        {/* Bottom cards */}
         <div className="productivityCardBottomWrapper w-full h-[57vh] relative flex items-center justify-between">
+          {/* Card 1 */}
           <div className="productivityCardBottom h-full w-[32%] bg-[#FFFFFF14] text-white relative overflow-hidden">
             <div className="w-[19vw] h-[8vw] p-5">
               <h2 className="font-bold leading-tight text-[1.6vw]">Scalable</h2>
@@ -57,9 +59,11 @@ const Productivity = () => {
             <img
               src="/bottom-1.png"
               className="absolute -bottom-[14%] -right-1"
+              alt="Scalable"
             />
           </div>
 
+          {/* Card 2 */}
           <div className="productivityCardBottom h-full w-[32%] bg-[#FFFFFF14] text-white relative overflow-hidden">
             <div className="w-[19vw] h-[8vw] p-5">
               <h2 className="font-bold leading-tight text-[1.6vw]">
@@ -74,8 +78,11 @@ const Productivity = () => {
             <img
               src="/bottom-2.png"
               className="absolute -bottom-[14%] -right-1"
+              alt="Lightning Fast"
             />
           </div>
+
+          {/* Card 3 */}
           <div className="productivityCardBottom h-full w-[32%] bg-[#FFFFFF14] text-white relative overflow-hidden">
             <div className="w-[19vw] h-[8vw] p-5">
               <h2 className="font-bold leading-tight text-[1.6vw]">
@@ -89,6 +96,7 @@ const Productivity = () => {
             <img
               src="/bottom-3.png"
               className="absolute -bottom-[14%] -right-1"
+              alt="Predictive Analytics"
             />
           </div>
         </div>

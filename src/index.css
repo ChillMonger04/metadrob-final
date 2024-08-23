@@ -147,3 +147,46 @@ body {
 .animate-scroll-full {
   animation: scroll-full 6s linear infinite;
 }
+
+/* Styling for individual bottom cards */
+.productivityCardBottom {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.08); /* Semi-transparent background */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ensure images are already present and positioned correctly */
+.productivityCardBottom img {
+  position: absolute;
+  bottom: -14%;
+  right: -1%;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, bottom 0.3s ease, filter 0.3s ease;
+  z-index: 1;
+}
+
+/* Text container */
+.productivityCardBottom div {
+  transition: filter 0.3s ease;
+}
+
+/* Scale up and move the image slightly upwards on hover */
+.productivityCardBottom:hover img {
+  transform: scale(1.05); /* Slightly reduce the scale */
+  bottom: 0%; /* Move image upwards */
+  z-index: 2; /* Make sure image is on top */
+}
+
+/* Blur the text behind the image on hover */
+.productivityCardBottom:hover div {
+  filter: blur(4px); /* Apply a blur effect to the text */
+}
+
+/* Add a subtle shadow and transform on hover for the card */
+.productivityCardBottom:hover {
+  transform: translateY(-10px); /* Move the card slightly upwards */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
+}
