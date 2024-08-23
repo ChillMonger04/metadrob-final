@@ -58,7 +58,7 @@ const Productivity = () => {
             </div>
             <img
               src="/bottom-1.png"
-              className="absolute -bottom-[14%] -right-1"
+              className="absolute -bottom-[14%] -right-1 mt-1"
               alt="Scalable"
             />
           </div>
@@ -77,7 +77,7 @@ const Productivity = () => {
             </div>
             <img
               src="/bottom-2.png"
-              className="absolute -bottom-[14%] -right-1"
+              className="absolute -bottom-[14%] -right-1 mt-1"
               alt="Lightning Fast"
             />
           </div>
@@ -95,7 +95,7 @@ const Productivity = () => {
             </div>
             <img
               src="/bottom-3.png"
-              className="absolute -bottom-[14%] -right-1"
+              className="absolute -bottom-[14%] -right-1 mt-1"
               alt="Predictive Analytics"
             />
           </div>
