@@ -77,7 +77,7 @@ const Productivity = () => {
             </div>
             <img
               src="/bottom-2.png"
-              className="absolute -bottom-[14%] -right-1 mt-1"
+              className="absolute -bottom-[14%] -right-1 mt-2"
               alt="Lightning Fast"
             />
           </div>
