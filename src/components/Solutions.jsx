@@ -1,8 +1,5 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import SplitType from "split-type";
 import AnimatedTextCharacter from "./AnimatedTextCharacter";
 
 const cardData = [
@@ -53,14 +50,44 @@ const Solutions = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const carouselRef = useRef(null);
   const scrollbarRef = useRef(null);
+  const isDraggingScrollbar = useRef(false);
 
   useEffect(() => {
-    const scrollWidth =
-      carouselRef.current.scrollWidth - carouselRef.current.offsetWidth;
-    setWidth(scrollWidth);
+    const handleResize = () => {
+      const scrollWidth =
+        carouselRef.current.scrollWidth - carouselRef.current.offsetWidth;
+      setWidth(scrollWidth);
+    };
+
+    handleResize(); // Initial calculation
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const handleScrollbarMove = (e) => {
+  useEffect(() => {
+    const handleCarouselScroll = () => {
+      if (carouselRef.current && scrollbarRef.current) {
+        const scrollPercentage = carouselRef.current.scrollLeft / width;
+        const scrollbarWidth =
+          scrollbarRef.current.parentNode.offsetWidth -
+          scrollbarRef.current.offsetWidth;
+        scrollbarRef.current.style.left = `${
+          scrollPercentage * scrollbarWidth
+        }px`;
+      }
+    };
+
+    const carouselElement = carouselRef.current;
+    if (carouselElement) {
+      carouselElement.addEventListener("scroll", handleCarouselScroll);
+      return () => {
+        carouselElement.removeEventListener("scroll", handleCarouselScroll);
+      };
+    }
+  }, [width]);
+
+  const handleScrollbarDrag = (e, info) => {
     if (carouselRef.current && scrollbarRef.current) {
       const scrollbarContainer = scrollbarRef.current.parentNode;
       const scrollbarWidth =
@@ -69,9 +96,7 @@ const Solutions = () => {
         carouselRef.current.scrollWidth - carouselRef.current.offsetWidth;
 
       let newScrollPosition =
-        e.clientX -
-        scrollbarContainer.getBoundingClientRect().left -
-        scrollbarRef.current.offsetWidth / 2;
+        info.point.x - scrollbarContainer.getBoundingClientRect().left;
       newScrollPosition = Math.max(
         0,
         Math.min(newScrollPosition, scrollbarWidth)
@@ -85,29 +110,40 @@ const Solutions = () => {
     }
   };
 
-  // // For text reveal animation
-  // useEffect(() => {
-  //   gsap.config({ trialWarn: false });
-  //   gsap.registerPlugin(ScrollTrigger);
+  const handleCarouselDrag = (e, info) => {
+    if (carouselRef.current && scrollbarRef.current) {
+      const maxScroll =
+        carouselRef.current.scrollWidth - carouselRef.current.offsetWidth;
+      const scrollPercentage = carouselRef.current.scrollLeft / maxScroll;
 
-  //   const split = new SplitType(".heading2", { type: "chars" });
+      const scrollbarWidth =
+        scrollbarRef.current.parentNode.offsetWidth -
+        scrollbarRef.current.offsetWidth;
 
-  //   gsap.to(split.chars, {
-  //     delay: 2,
-  //     color: "white",
-  //     stagger: 1,
-  //     duration: 5,
-  //     ease: "power3.out",
-  //     scrollTrigger: {
-  //       trigger: ".parent",
-  //       start: "top 70%",
-  //       end: "top 25%",
-  //       scrub: true,
-  //       markers: false,
-  //     },
-  //   });
-  //   ScrollTrigger.refresh();
-  // }, []);
+      scrollbarRef.current.style.left = `${
+        scrollPercentage * scrollbarWidth
+      }px`;
+    }
+  };
+
+  const handleMouseDownScrollbar = (e) => {
+    isDraggingScrollbar.current = true;
+
+    const handleMouseMove = (event) => {
+      if (isDraggingScrollbar.current) {
+        handleScrollbarDrag(event, { point: { x: event.clientX } });
+      }
+    };
+
+    const handleMouseUp = () => {
+      isDraggingScrollbar.current = false;
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  };
 
   return (
     <div
@@ -122,7 +158,6 @@ const Solutions = () => {
             textAlign="left"
             stagger="0.02"
           />
-          {/* Unlock Next-Level Shopping: Innovative Virtual Retail Solutions for Your Business */}
         </h2>
         <p className="text-[#b3b2b2] w-[42%] text-[1.21vw]">
           <AnimatedTextCharacter
@@ -137,6 +172,7 @@ const Solutions = () => {
       <motion.div
         ref={carouselRef}
         className="carousel overflow-x-hidden cursor-grab"
+        onScroll={handleCarouselDrag}
       >
         <motion.div
           drag="x"
@@ -161,20 +197,18 @@ const Solutions = () => {
       </motion.div>
 
       <div className="scrollbar-container mt-4 w-full h-4 bg-gray-700 rounded-full relative">
-        <div
+        <motion.div
           ref={scrollbarRef}
           className="scrollbar h-full bg-gray-500 rounded-full absolute"
-          style={{ left: `${(scrollPosition / width) * 100}%` }}
-          onMouseDown={(e) => {
-            const handleMouseMove = (event) => handleScrollbarMove(event);
-            const handleMouseUp = () => {
-              document.removeEventListener("mousemove", handleMouseMove);
-              document.removeEventListener("mouseup", handleMouseUp);
-            };
-            document.addEventListener("mousemove", handleMouseMove);
-            document.addEventListener("mouseup", handleMouseUp);
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDrag={handleScrollbarDrag}
+          onMouseDown={handleMouseDownScrollbar}
+          style={{
+            left: `${(scrollPosition / width) * 100}%`,
+            width: `calc(100% / ${cardData.length})`, // Adjust width based on number of cards
           }}
-        ></div>
+        />
       </div>
     </div>
   );
