@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import AnimatedTextCharacter from "./AnimatedTextCharacter";
+import TextReveal from "./TextReveal";
 
 const cardData = [
   {
@@ -151,22 +151,15 @@ const Solutions = () => {
       data-scroll-section
     >
       <div className="sol-top child flex items-start justify-between mb-20">
-        <h2 className="text-[40px] w-[45%] font-semibold leading-[4vw]">
-          <AnimatedTextCharacter
-            text={`Unlock Next-Level\nShopping:Innovative\nVirtual Retail Solutions\nfor Your Business`}
-            fontSize="40px"
-            textAlign="left"
-            stagger="0.02"
-          />
-        </h2>
-        <p className="text-[#b3b2b2] w-[42%] text-[1.21vw]">
-          <AnimatedTextCharacter
-            text={`Virtual Retail Solutions redefine shopping convenience, bringing the\nstore to your fingertips. Experience seamless online shopping like\nnever before. Get a tailor-made solution for your retail business\nneeds.`}
-            fontSize="1.21vw"
-            textAlign="left"
-            stagger="0.008"
-          />
-        </p>
+        <TextReveal
+          text="Unlock Next-Level Shopping: Innovative Virtual Retail Solutions for Your Business"
+          className="text-[40px] w-[40%] font-semibold leading-[4vw]"
+        />
+
+        <TextReveal
+          text="Virtual Retail Solutions redefine shopping convenience, bringing the store to your fingertips. Experience seamless online shopping like never before. Get a tailor-made solution for your retail business needs."
+          className="text-[#b3b2b2] w-[42%] text-[1.21vw]"
+        />
       </div>
 
       <motion.div
