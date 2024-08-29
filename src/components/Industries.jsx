@@ -1,5 +1,5 @@
 import Card from "./Card";
-import AnimatedTextCharacter from "./AnimatedTextCharacter";
+import TextReveal from "./TextReveal";
 
 const cardData = [
   {
@@ -51,22 +51,15 @@ const Industries = () => {
       data-scroll-section
     >
       <div className="industriesTop flex flex-col items-center justify-center text-center mb-16">
-        <h1 className="text-[40px] w-[70%] font-semibold leading-none">
-          <AnimatedTextCharacter
-            text="Industries We Serve"
-            fontSize="40px"
-            textAlign="center"
-            stagger="0.02"
-          />
-        </h1>
-        <p className="text-[#b3b2b2] w-[73%] text-[1.1vw] mt-[2vw]">
-          <AnimatedTextCharacter
-            text={`Explore Metadrob's industry-specific solutions, crafted to meet your unique needs and drive your success. Unlock your full potential with our tailored support and expertise.`}
-            fontSize="1.21vw"
-            textAlign="center"
-            stagger="0.008"
-          />
-        </p>
+        <TextReveal
+          text="Industries We Serve"
+          className="text-[40px] w-[70%] font-semibold leading-none"
+        />
+
+        <TextReveal
+          text="Explore Metadrob's industry-specific solutions, crafted to meet your unique needs and drive your success. Unlock your full potential with our tailored support and expertise."
+          className="text-[#b3b2b2] w-[73%] text-[1.1vw] mt-[2vw]"
+        />
       </div>
 
       <div className="cardContainer flex items-center justify-center gap-x-6 gap-y-16 flex-wrap">

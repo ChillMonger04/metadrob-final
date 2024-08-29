@@ -1,4 +1,4 @@
-import AnimatedTextCharacter from "./AnimatedTextCharacter";
+import TextReveal from "./TextReveal";
 
 const Productivity = () => {
   return (
@@ -7,22 +7,15 @@ const Productivity = () => {
       // data-scroll-section
     >
       <div className="productivityTop flex flex-col items-center justify-center text-center">
-        <h1 className="text-[40px] w-[70%] font-semibold">
-          <AnimatedTextCharacter
-            text="Increase productivity with advanced product management"
-            fontSize="40px"
-            textAlign="center"
-            stagger="0.02"
-          />
-        </h1>
-        <p className="text-[#b3b2b2] w-[90%] text-[1.1vw] mt-[2vw]">
-          <AnimatedTextCharacter
-            text={`Our industry-specific solutions are tailor-made to address your unique challenges and opportunities, providing\nspecialized support to fuel your success in your field. Unlock the full potential of your business with precision and expertise.`}
-            fontSize="1.21vw"
-            textAlign="center"
-            stagger="0.008"
-          />
-        </p>
+        <TextReveal
+          text="Increase productivity with advanced product management"
+          className="text-[40px] w-[70%] font-semibold"
+        />
+
+        <TextReveal
+          text="Our industry-specific solutions are tailor-made to address your unique challenges and opportunities, providing specialized support to fuel your success in your field. Unlock the full potential of your business with precision and expertise."
+          className="text-[#b3b2b2] w-[90%] text-[1.1vw] mt-[2vw]"
+        />
       </div>
 
       <div className="productivityWrapper mt-6 flex flex-col gap-4 text-black">

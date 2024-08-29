@@ -1,10 +1,5 @@
 import { MdOutlineFileDownload } from "react-icons/md";
-// import { useEffect } from "react";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import SplitType from "split-type";
-
-import AnimatedTextCharacter from "./AnimatedTextCharacter";
+import TextReveal from "./TextReveal";
 
 const Features = () => {
   return (
@@ -13,22 +8,15 @@ const Features = () => {
       data-scroll-section
     >
       <div className="features-top flex flex-col items-center justify-center text-center">
-        <h1 className="text-[40px] font-semibold">
-          <AnimatedTextCharacter
-            text="Innovative features for modern store"
-            fontSize="40px"
-            textAlign = "center"
-            stagger = "0.02"
-          />
-        </h1>
-        <p className="text-[#b3b2b2] w-[70%] text-[1.21vw] mt-[2vw]">
-          <AnimatedTextCharacter
-            text=" Our industry-specific solutions are tailor-made to address your unique challenges and opportunities, providing specialized support to fuel your success in your field. Unlock the full potential of your business with precision and expertise."
-            fontSize="1.21vw"
-            textAlign = "center"
-            stagger = "0.008"
-          />
-        </p>
+        <TextReveal
+          text="Innovative features for modern store"
+          className="text-[40px] font-semibold"
+        />
+
+        <TextReveal
+          text="Our industry-specific solutions are tailor-made to address your unique challenges and opportunities, providing specialized support to fuel your success in your field. Unlock the full potential of your business with precision and expertise."
+          className="text-[#b3b2b2] w-[70%] text-[1.21vw] mt-[2vw]"
+        />
       </div>
 
       <div className="features-wrapper px-32 flex mt-[4vw] text-white gap-6">

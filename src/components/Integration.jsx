@@ -1,4 +1,4 @@
-import AnimatedTextCharacter from "./AnimatedTextCharacter";
+import TextReveal from "./TextReveal";
 
 const SeamlessIntegration = () => {
   return (
@@ -50,22 +50,15 @@ const SeamlessIntegration = () => {
 
       <div className="z-10 w-[80%] mt-16 text-white">
         <div className="childIntegration integrationContent flex flex-col items-center justify-center">
-          <h1 className="text-[40px] font-semibold">
-            <AnimatedTextCharacter
-              text="Seamless Integration"
-              fontSize="40px"
-              textAlign="center"
-              stagger="0.02"
-            />
-          </h1>
-          <p className="text-[#b3b2b2] w-[90%] text-[1.1vw] mt-[2vw] text-center">
-            <AnimatedTextCharacter
-              text={`Our smooth integration streamlines your business, connecting your online store with powerful tools to boost efficiency and growth.\nEmbrace the future of retail with seamless digital solutions and integration with third-party e-commerce platforms.`}
-              fontSize="1.21vw"
-              textAlign="center"
-              stagger="0.008"
-            />
-          </p>
+          <TextReveal
+            text="Seamless Integration"
+            className="text-[40px] font-semibold"
+          />
+
+          <TextReveal
+            text="Our smooth integration streamlines your business, connecting your online store with powerful tools to boost efficiency and growth. Embrace the future of retail with seamless digital solutions and integration with third-party e-commerce platforms."
+            className="text-[#b3b2b2] w-[90%] text-[1.1vw] mt-[2vw] text-center"
+          />
         </div>
 
         <img
