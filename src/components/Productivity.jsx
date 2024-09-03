@@ -2,10 +2,7 @@ import TextReveal from "./TextReveal";
 
 const Productivity = () => {
   return (
-    <div
-      className="w-full min-h-screen text-white px-40 mt-36"
-      // data-scroll-section
-    >
+    <div className="w-full min-h-screen text-white px-40 mt-36">
       <div className="productivityTop flex flex-col items-center justify-center text-center">
         <TextReveal
           text="Increase productivity with advanced product management"
@@ -40,7 +37,7 @@ const Productivity = () => {
         {/* Bottom cards */}
         <div className="productivityCardBottomWrapper w-full h-[57vh] relative flex items-center justify-between">
           {/* Card 1 */}
-          <div className="productivityCardBottom h-full w-[32%] bg-[#FFFFFF14] text-white relative overflow-hidden">
+          <div className="productivityCardBottom h-full w-[32.5%] bg-[#FFFFFF14] text-white relative overflow-hidden">
             <div className="w-[19vw] h-[8vw] p-5">
               <h2 className="font-bold leading-tight text-[1.6vw]">Scalable</h2>
               <p className="text-[#FFFFFFA6] text-[0.9vw] leading-[1vw] mt-1">
@@ -57,7 +54,7 @@ const Productivity = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="productivityCardBottom h-full w-[32%] bg-[#FFFFFF14] text-white relative overflow-hidden">
+          <div className="productivityCardBottom h-full w-[32.5%] bg-[#FFFFFF14] text-white relative overflow-hidden">
             <div className="w-[19vw] h-[8vw] p-5">
               <h2 className="font-bold leading-tight text-[1.6vw]">
                 Lightning Fast
@@ -76,7 +73,7 @@ const Productivity = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="productivityCardBottom h-full w-[32%] bg-[#FFFFFF14] text-white relative overflow-hidden">
+          <div className="productivityCardBottom h-full w-[32.5%] bg-[#FFFFFF14] text-white relative overflow-hidden">
             <div className="w-[19vw] h-[8vw] p-5">
               <h2 className="font-bold leading-tight text-[1.6vw]">
                 Predictive analytics

@@ -11,7 +11,7 @@ import CustomCursor from "./components/CustomCursor";
 
 const App = () => {
   return (
-    <div className="app-container bg-black">
+    <div className="app-container">
       <CustomCursor />
       <div className="componentContainer">
         <Introduction />

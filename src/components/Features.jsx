@@ -5,7 +5,6 @@ const Features = () => {
   return (
     <div
       className="w-full min-h-screen text-white mt-[18vw] mb-12"
-      data-scroll-section
     >
       <div className="features-top flex flex-col items-center justify-center text-center">
         <TextReveal
@@ -21,7 +20,7 @@ const Features = () => {
 
       <div className="features-wrapper px-32 flex mt-[4vw] text-white gap-6">
         <div className="features-left flex flex-col items-center justify-center gap-6">
-          <div className="feature-card w-[40vw] h-[14vw] rounded-[1.6vw] bg-black border border-gray-500 relative overflow-hidden cursor-pointer flex items-center justify-center">
+          <div className="feature-card-1 w-[40vw] h-[14vw] rounded-[1.6vw] bg-black border border-gray-500 relative overflow-hidden cursor-pointer flex items-center justify-center">
             <div className="feature-content z-50  flex flex-col items-center justify-center gap-4">
               <h2 className="text-[2vw] leading-[2.7vw] font-bold w-[60%] text-center">
                 Turn collaboration into innovation
@@ -35,8 +34,8 @@ const Features = () => {
             <div className="circle-left absolute -top-[28vw] right-[24vw] z-20 w-[40vw] h-[40vw] bg-black rounded-full shadow-[0_15.35px_50px_rgba(128,_128,_128,_0.7)]"></div>
           </div>
 
-          <div className="feature-card w-[40vw] h-[25vw] rounded-[1.6vw] bg-[#EAEEF2] flex items-end justify-start overflow-hidden">
-            <div className="feature-content w-[20vw] h-[13vw] text-black px-5 pt-10">
+          <div className="feature-card-2 w-[40vw] h-[25vw] rounded-[1.6vw] bg-[#EAEEF2] flex items-end justify-start overflow-hidden">
+            <div className="feature-content w-[20vw] h-[13vw] text-black pl-4 pr-5 pt-10">
               <h2 className="font-bold leading-tight text-[1.6vw]">
                 Content Management System
               </h2>
@@ -49,7 +48,7 @@ const Features = () => {
         </div>
 
         <div className="feature-right flex flex-col items-center justify-start gap-6">
-          <div className="feature-card bg-[#EAEEF2] w-[40vw] h-[19.3vw] rounded-[1.6vw] flex items-end justify-start overflow-hidden">
+          <div className="feature-card-3 bg-[#EAEEF2] w-[40vw] h-[19.3vw] rounded-[1.6vw] flex items-end justify-start overflow-hidden">
             <div className="feature-content w-[20vw] h-[13vw] text-black px-5 pt-10">
               <h2 className="font-bold leading-tight text-[1.6vw]">
                 Cross Device Play
@@ -62,7 +61,7 @@ const Features = () => {
             </div>
           </div>
 
-          <div className="feature-card bg-[#EAEEF2] w-[40vw] h-[19.7vw] rounded-[1.6vw] flex items-start justify-end overflow-hidden">
+          <div className="feature-card-4 bg-[#EAEEF2] w-[40vw] h-[19.7vw] rounded-[1.6vw] flex items-start justify-end overflow-hidden">
             <div className="feature-content w-[20vw] h-[13vw] text-black px-5 pt-5">
               <h2 className="font-bold leading-tight text-[1.6vw]">
                 Virtual Try On
