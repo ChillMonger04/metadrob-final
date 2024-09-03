@@ -1,3 +1,4 @@
+import React from "react";
 import Introduction from "./components/Introduction";
 import Solutions from "./components/Solutions";
 import Features from "./components/Features";
@@ -10,9 +11,9 @@ import CustomCursor from "./components/CustomCursor";
 
 const App = () => {
   return (
-    <>
+    <div className="app-container bg-black">
       <CustomCursor />
-      <div className="componentContainer bg-black">
+      <div className="componentContainer">
         <Introduction />
         <Solutions />
         <Features />
@@ -22,7 +23,7 @@ const App = () => {
         <Testimonials />
         <ContactForm />
       </div>
-    </>
+    </div>
   );
 };
 

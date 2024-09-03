@@ -1,6 +1,6 @@
 const ContactForm = () => {
   return (
-    <div className="w-full min-h-screen bg-black flex justify-between items-start gap-32 text-white px-32 mb-20">
+    <div className="w-full min-h-screen flex justify-between items-start gap-32 text-white px-32 mb-20">
       {/* Left Div */}
       <div className="w-[36vw] h-[50vw] rounded-lg bg-pink-300 overflow-hidden">
         <img

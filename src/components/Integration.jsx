@@ -3,7 +3,7 @@ import TextReveal from "./TextReveal";
 const SeamlessIntegration = () => {
   return (
     <div
-      className="parentIntegration relative flex items-center justify-center min-h-screen bg-black mt-20"
+      className="parentIntegration relative flex items-center justify-center min-h-screen mt-20"
       // data-scroll-section
     >
       <div className="absolute inset-0 flex justify-around">

@@ -47,7 +47,7 @@ const cardData = [
 const Industries = () => {
   return (
     <div
-      className="w-full min-h-screen bg-black text-white px-16 mt-36"
+      className="w-full min-h-screen text-white px-16 mt-36"
       data-scroll-section
     >
       <div className="industriesTop flex flex-col items-center justify-center text-center mb-16">

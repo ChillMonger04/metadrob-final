@@ -4,7 +4,7 @@ import TextReveal from "./TextReveal";
 const Features = () => {
   return (
     <div
-      className="w-full min-h-screen bg-black text-white mt-[18vw] mb-12"
+      className="w-full min-h-screen text-white mt-[18vw] mb-12"
       data-scroll-section
     >
       <div className="features-top flex flex-col items-center justify-center text-center">
