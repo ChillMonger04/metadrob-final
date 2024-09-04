@@ -1,12 +1,12 @@
 const Introduction = () => {
   return (
     <div className="wrapper py-10 px-20" data-scroll-section>
-      <div className="intro-top flex flex-col items-center z-10">
+      <div className="intro-top flex flex-col items-center">
         <h3 className="text-[1.21vw] text-[#939393]">
           The most innovative companies supported Metadrob
         </h3>
         <img
-          src="/introBanner.png"
+          src="/introBannerTransparent.png"
           alt="companies-banner"
           className="w-[70vw] leading-snug -mt-[10vw]"
         />

@@ -140,7 +140,7 @@ body {
   position: relative;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.08); /* Semi-transparent background */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 /* Ensure images are already present and positioned correctly */
@@ -171,9 +171,8 @@ body {
   filter: blur(4px); /* Apply a blur effect to the text */
 }
 
-/* Add a subtle shadow and transform on hover for the card */
+/* Add a subtle shadow on hover for the card */
 .productivityCardBottom:hover {
-  transform: translateY(-10px); /* Move the card slightly upwards */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add a subtle shadow */
 }
 

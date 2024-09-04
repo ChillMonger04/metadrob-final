@@ -175,7 +175,7 @@ const Solutions = () => {
           {cardData.map((card, index) => (
             <motion.div
               key={index}
-              className="card bg-black w-[20vw] h-[30vw] flex-shrink-0 rounded-[2vw] p-5 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:border-2 border-gray-700"
+              className="group card bg-black/40 backdrop-blur-lg border border-transparent transition-all duration-300 ease-in-out w-[20vw] h-[30vw] flex-shrink-0 rounded-[2vw] p-5 flex flex-col items-center justify-center hover:border-gray-500 hover:scale-105"
             >
               <img className="w-52" src={card.image} alt={card.title} />
               <h3 className="mt-6 font-semibold uppercase text-[1.5vw]">

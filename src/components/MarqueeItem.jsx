@@ -1,5 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+/* eslint-disable react/prop-types */
+import { useState, useRef, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const TestimonialCard = ({ testimonial, onMouseEnter, onMouseLeave }) => {
@@ -37,9 +38,9 @@ const TestimonialCard = ({ testimonial, onMouseEnter, onMouseLeave }) => {
           </a>
         </div>
       </div>
-      <div className="flex items-center justify-between mb-2"> {/* Changed mb-6 to mb-2 */}
-        <img src="/quotes.png" className="w-14 -ml-4" />
-        <div className="w-full h-0.5 bg-white ml-2"></div> {/* Changed h-1 to h-0.5 for a thinner line */}
+      <div className="flex items-center justify-between mb-2">
+        <img src="/quotes.png" className="w-14 -ml-4" alt="Quotes" />
+        <div className="w-full h-0.5 bg-white ml-2"></div>
       </div>
       <p className="text-white text-base leading-tight">{testimonial.quote}</p>
     </div>
@@ -47,20 +48,46 @@ const TestimonialCard = ({ testimonial, onMouseEnter, onMouseLeave }) => {
 };
 
 const MarqueeItem = ({ testimonials, from, to }) => {
-  const [isPaused, setIsPaused] = React.useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const containerRef = useRef(null);
+  const controls = useAnimation();
+  const [currentPosition, setCurrentPosition] = useState(from);
 
-  const handleMouseEnter = () => setIsPaused(true);
-  const handleMouseLeave = () => setIsPaused(false);
+  useEffect(() => {
+    controls.start({
+      x: to,
+      transition: {
+        duration: 55,
+        repeat: Infinity,
+        ease: "linear",
+      },
+    });
+  }, [controls, to]);
+
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+    controls.stop();
+    setCurrentPosition(controls.get("x"));
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+    controls.start({
+      x: to,
+      transition: {
+        duration: 55,
+        repeat: Infinity,
+        ease: "linear",
+      },
+    });
+  };
 
   return (
-    <div className="flex overflow-hidden">
+    <div className="flex overflow-hidden" ref={containerRef}>
       <motion.div
-        initial={{ x: from }}
-        animate={{ x: isPaused ? from : to }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        animate={controls}
+        style={{ x: currentPosition }}
         className="flex flex-shrink-0"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
       >
         {testimonials.map((testimonial) => (
           <TestimonialCard
@@ -72,12 +99,9 @@ const MarqueeItem = ({ testimonials, from, to }) => {
         ))}
       </motion.div>
       <motion.div
-        initial={{ x: from }}
-        animate={{ x: isPaused ? from : to }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        animate={controls}
+        style={{ x: currentPosition }}
         className="flex flex-shrink-0"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
       >
         {testimonials.map((testimonial) => (
           <TestimonialCard
