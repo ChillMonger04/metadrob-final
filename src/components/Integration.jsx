@@ -6,7 +6,7 @@ const SeamlessIntegration = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="parentIntegration relative flex items-center justify-center min-h-screen mt-20">
+    <div className="parentIntegration relative flex items-center justify-center min-h-screen mt-28">
       <div className="absolute inset-0 flex justify-around">
         {/* Your scrolling lines */}
         <div className="relative w-[1.3px] h-[124vh] overflow-hidden">

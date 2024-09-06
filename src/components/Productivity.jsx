@@ -2,7 +2,7 @@ import TextReveal from "./TextReveal";
 
 const Productivity = () => {
   return (
-    <div className="w-full min-h-screen text-white px-40 mt-36">
+    <div className="w-full min-h-screen text-white px-40 mt-12">
       <div className="productivityTop flex flex-col items-center justify-center text-center">
         <TextReveal
           text="Increase productivity with advanced product management"
